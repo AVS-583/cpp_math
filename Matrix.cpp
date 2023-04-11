@@ -1,10 +1,53 @@
-﻿#include "stdafx.h"
+﻿#include <iostream>
+#include "stdafx.h"
 /*!
 \addtogroup Matrix_ Класс матрица
 \file
 \brief Здесь находятся исходные коды методов класса. Описание методов приведено в Matrix.hpp.
 @{
 */
+
+Matrix::Matrix(int rows, int cols)
+{
+    //cout << "Вызван конструктор " << this << endl;
+    this->rows = rows;
+    this->cols = cols;
+    matrix = new double* [rows];
+    for (int i = 0; i < rows; i++) {
+        matrix[i] = new double[cols];
+    }
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            matrix[i][j] = 0;
+        }
+    }
+}
+
+Matrix::Matrix(const Matrix& other)
+{
+    //cout << "Вызван конструктор копирования " << this << endl;
+    this->rows = other.rows;
+    this->cols = other.cols;
+    matrix = new double* [rows];
+    for (int i = 0; i < rows; i++) {
+        matrix[i] = new double[cols];
+    }
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            matrix[i][j] = other.matrix[i][j];
+        }
+    }
+}
+
+Matrix::~Matrix()
+{
+    for (int i = 0; i < rows; i++) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+    //cout << "Вызван деструктор " << this << endl;
+}
+
 Matrix& Matrix::operator= (const Matrix& other)
 {
     if (this == &other)
@@ -190,13 +233,7 @@ Matrix Matrix::inverse()
         }
     }
     result = cofactor.transpose(); // этот result ломает дальнейшие вызовы методов этого класса
-    /*
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            result.matrix[j][i] = cofactor.matrix[i][j];
-        }
-    }
-    */
+
     result.multiply(1.0 / determinant);
     return result;
 }
@@ -210,9 +247,6 @@ void Matrix::identity()
     }
 }
 
-/*!
-\param name Имя матрицы для вывода. Необязательный параметр типа string. Выводится в консоль над матрицей.
-*/
 void Matrix::print(const std::string name) const
 {
     if (name != "") {

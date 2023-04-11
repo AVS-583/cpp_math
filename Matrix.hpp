@@ -14,80 +14,110 @@ private:
     int rows, cols;                                 ///< Строки, столбцы матрицы
     double** matrix;
 public:
-    /// Конструктор класса, создающий динамический массив - матрицу. При инициализации матрица заполняется нулями
-    Matrix(int rows, int cols)
-    {
-        //cout << "Вызван конструктор " << this << endl;
-        this->rows = rows;
-        this->cols = cols;
-        matrix = new double* [rows];
-        for (int i = 0; i < rows; i++) {
-            matrix[i] = new double[cols];
-        }
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix[i][j] = 0;
-            }
-        }
-    }
-
-    /// Конструктор копирования
-    Matrix(const Matrix& other)
-    {
-        //cout << "Вызван конструктор копирования " << this << endl;
-        this->rows = other.rows;
-        this->cols = other.cols;
-        matrix = new double* [rows];
-        for (int i = 0; i < rows; i++) {
-            matrix[i] = new double[cols];
-        }
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                matrix[i][j] = other.matrix[i][j];
-            }
-        }
-    }
-
-    /// Деструктор класса, освобождающий память
-    ~Matrix()
-    {
-        for (int i = 0; i < rows; i++) {
-            delete[] matrix[i];
-        }
-        delete[] matrix;
-        //cout << "Вызван деструктор " << this << endl;
-    }
-
-    Matrix& operator= (const Matrix& other);        ///<  Метод реализации присваивания через глубокое копирование
-
-    double& operator() (int row, int col);          ///<  Метод доступа к элементу матрицы
+    /*!
+    Конструктор класса
+    \param[in] rows число строк матрицы
+    \param[in] cols число столбцов матрицы
+    */
+    Matrix(int rows, int cols);
+    /*!
+    Конструктор копирования
+    \param[in] other копируемая матрица
+    */
+    Matrix(const Matrix& other);
+    /// Деструктор класса
+    ~Matrix();
+    /*!
+    Метод реализации присваивания через глубокое копирование
+    \param[in] other копируемая матрица
+    */
+    Matrix& operator= (const Matrix& other);
+    /*!
+    Метод доступа к элементу матрицы
+    \brief Может применятся как для перезаписи элемента, так и для его получения
+    \param[in] rows номер строки элемента
+    \param[in] cols номер столбца элемента
+    \param[out] возвращаемый элемент матрицы
+    */
+    double& operator() (int row, int col); 
     /*!
     * Методы сложения (вычитания) матриц, умножения матрицы на матрицу и матрицы на скаляр 
     * реализуются через перегрузку операторов +(-) и * соответсвенно 
     * не изменяют исходную матрицу, а возвращают новую
     */
-    Matrix operator+ (const Matrix& other);         ///<  Метод сложения матриц
-    Matrix operator- (const Matrix& other);         ///<  Метод вычитания матриц
-    Matrix operator* (const Matrix& other);         ///<  Метод умножения матриц
-    Matrix operator* (const double scalar);         ///<  Метод умножения матрицы на число
+    /*!
+    Метод сложения матриц
+    \param[in] other второй оперант (матрица)
+    \param[out] result возвращаемая матрица (результат сложения)
+    */
+    Matrix operator+ (const Matrix& other);
+    /*!
+    Метод вычитания матриц
+    \param[in] other второй оперант (матрица)
+    \param[out] result возвращаемая матрица (результат вычитания)
+    */
+    Matrix operator- (const Matrix& other);
+    /*!
+    Метод умножения матриц
+    \param[in] other второй оперант (матрица)
+    \param[out] result возвращаемая матрица (результат умножения)
+    */
+    Matrix operator* (const Matrix& other);
+    /*!
+    Метод умножения матрицы на скаляр
+    \param[in] other - второй оперант (число)
+    \param[out] result - возвращаемая матрица (результат умножения)
+    */
+    Matrix operator* (const double scalar);
     /*!
     * Методы умножения матрицы на матрицу и матрицы на скаляр дублируются перегруженным методом multiply
     * В отличие от оператора *, multiply изменяет исходную матрицу
     */
-    void multiply(const Matrix& other);             ///<  Метод умножения матриц с изменением исходной матрицы
-    void multiply(const double scalar);             ///<  Метод умножения матрицы на число с изменением исходной матрицы
+    /*!
+    Метод умножения матриц с изменением исходной матрицы
+    \param[in] other второй оперант (матрица)
+    */
+    void multiply(const Matrix& other);
+    /*!
+    Метод умножения матрицы на скаляр с изменением исходной матрицы
+    \param[in] scalar второй оперант (число)
+    */
+    void multiply(const double scalar);
     /*!
     * Методы для прочих вычислений с матрицей
     */
-    Matrix transpose() const;                       ///<  Метод транспонирования  
-    double det();                                   ///<  Метод вычисления определителя матрицы
-    Matrix minor(int row, int col);                 ///<  Метод вычисления минора матрицы
-    Matrix inverse();                               ///<  Метод вычисления обратной матрицы
+    /*!
+    Метод транспонирования матрицы
+    \param[out] result транспонированная (относительно исходной) матрица
+    */
+    Matrix transpose() const;
+    /*!
+    Метод нахождения определителя матрицы
+    \param[out] result - определитель матрицы
+    */
+    double det();
+    /*!
+    Метод нахождения минора матрицы
+    \param[in] rows номер вычеркиваемой строки
+    \param[in] cols номер вычеркиваемого столбца
+    \param[out] result минор матрицы
+    */
+    Matrix minor(int row, int col);
+    /*!
+    Метод обращения матрицы
+    \param[out] result обратная матрица
+    */
+    Matrix inverse();
     /*!
     * Другие методы
     */
-    void identity();                                ///<  Метод создания единичной матрицы
-    void print(const std::string name = "") const;  ///<  Метод вывода матрицы в консоль
+    /// Метод создания единичной матрицы
+    void identity();
+    /*!
+    Метод для печати матрицы в консоли
+    \param[in] name Название матрицы для вывода в консоли. Необязательный параметр типа string.
+    */
+    void print(const std::string name = "") const;
 };
 #endif // !MATRIX_HPP
 /*! @} */
