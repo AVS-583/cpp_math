@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Math: Класс Matrix</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Math<span id="projectnumber">&#160;0.2</span>
+   </div>
+   <div id="projectbrief">Собственная библиотека математики и линейной алгебры</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_matrix-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Matrix</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Объявление класса <a class="el" href="class_matrix.html" title="Объявление класса Matrix.">Matrix</a>.  
+ <a href="class_matrix.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_matrix_8hpp_source.html">Matrix.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7213414e405fd1c81c394d5053721fa7"><td class="memItemLeft" align="right" valign="top"><a id="a7213414e405fd1c81c394d5053721fa7" name="a7213414e405fd1c81c394d5053721fa7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix</b> (int rows, int cols)</td></tr>
+<tr class="memdesc:a7213414e405fd1c81c394d5053721fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса, создающий динамический массив - матрицу. При инициализации матрица заполняется нулями <br /></td></tr>
+<tr class="separator:a7213414e405fd1c81c394d5053721fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf708e864ed3d9db2c3b317c5e529ab"><td class="memItemLeft" align="right" valign="top"><a id="abcf708e864ed3d9db2c3b317c5e529ab" name="abcf708e864ed3d9db2c3b317c5e529ab"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix</b> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:abcf708e864ed3d9db2c3b317c5e529ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор копирования <br /></td></tr>
+<tr class="separator:abcf708e864ed3d9db2c3b317c5e529ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1c3627f573d78a2f08623fdfef990f"><td class="memItemLeft" align="right" valign="top"><a id="a9b1c3627f573d78a2f08623fdfef990f" name="a9b1c3627f573d78a2f08623fdfef990f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~Matrix</b> ()</td></tr>
+<tr class="memdesc:a9b1c3627f573d78a2f08623fdfef990f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класса, освобождающий память <br /></td></tr>
+<tr class="separator:a9b1c3627f573d78a2f08623fdfef990f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a3e40db12ae78b7616ee3f099bb15f13d"><td class="memItemLeft" align="right" valign="top"><a id="a3e40db12ae78b7616ee3f099bb15f13d" name="a3e40db12ae78b7616ee3f099bb15f13d"></a>
+<a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:a3e40db12ae78b7616ee3f099bb15f13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод реализации присваивания через глубокое копирование <br /></td></tr>
+<tr class="separator:a3e40db12ae78b7616ee3f099bb15f13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39ccc046734f8332b0198314118b5890"><td class="memItemLeft" align="right" valign="top"><a id="a39ccc046734f8332b0198314118b5890" name="a39ccc046734f8332b0198314118b5890"></a>
+double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (int row, int col)</td></tr>
+<tr class="memdesc:a39ccc046734f8332b0198314118b5890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод доступа к элементу матрицы <br /></td></tr>
+<tr class="separator:a39ccc046734f8332b0198314118b5890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ca86168259fdd09159c500dc002f82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a78ca86168259fdd09159c500dc002f82">operator+</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:a78ca86168259fdd09159c500dc002f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод сложения матриц  <br /></td></tr>
+<tr class="separator:a78ca86168259fdd09159c500dc002f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18b9161e4a64e26906136ecfa8fdc9b"><td class="memItemLeft" align="right" valign="top"><a id="aa18b9161e4a64e26906136ecfa8fdc9b" name="aa18b9161e4a64e26906136ecfa8fdc9b"></a>
+<a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:aa18b9161e4a64e26906136ecfa8fdc9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод вычитания матриц <br /></td></tr>
+<tr class="separator:aa18b9161e4a64e26906136ecfa8fdc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c13f2f7f2d01419453cd4ec42d9613"><td class="memItemLeft" align="right" valign="top"><a id="ab5c13f2f7f2d01419453cd4ec42d9613" name="ab5c13f2f7f2d01419453cd4ec42d9613"></a>
+<a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:ab5c13f2f7f2d01419453cd4ec42d9613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод умножения матриц <br /></td></tr>
+<tr class="separator:ab5c13f2f7f2d01419453cd4ec42d9613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab340cd8a5306125000bc91697caa9650"><td class="memItemLeft" align="right" valign="top"><a id="ab340cd8a5306125000bc91697caa9650" name="ab340cd8a5306125000bc91697caa9650"></a>
+<a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const double scalar)</td></tr>
+<tr class="memdesc:ab340cd8a5306125000bc91697caa9650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод умножения матрицы на число <br /></td></tr>
+<tr class="separator:ab340cd8a5306125000bc91697caa9650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac204ad5fbd6be38e816536ac8d56deac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ac204ad5fbd6be38e816536ac8d56deac">multiply</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:ac204ad5fbd6be38e816536ac8d56deac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод умножения матриц с изменением исходной матрицы  <br /></td></tr>
+<tr class="separator:ac204ad5fbd6be38e816536ac8d56deac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa717873c7dfb8a18c9431f6f33c69a32"><td class="memItemLeft" align="right" valign="top"><a id="aa717873c7dfb8a18c9431f6f33c69a32" name="aa717873c7dfb8a18c9431f6f33c69a32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>multiply</b> (const double scalar)</td></tr>
+<tr class="memdesc:aa717873c7dfb8a18c9431f6f33c69a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод умножения матрицы на число с изменением исходной матрицы <br /></td></tr>
+<tr class="separator:aa717873c7dfb8a18c9431f6f33c69a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759661b75b9681f3a89ff75e27933b3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a759661b75b9681f3a89ff75e27933b3a">transpose</a> () const</td></tr>
+<tr class="memdesc:a759661b75b9681f3a89ff75e27933b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод транспонирования <br  />
+  <br /></td></tr>
+<tr class="separator:a759661b75b9681f3a89ff75e27933b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace95025dd985ddaa6c1ed72e8b464a0a"><td class="memItemLeft" align="right" valign="top"><a id="ace95025dd985ddaa6c1ed72e8b464a0a" name="ace95025dd985ddaa6c1ed72e8b464a0a"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>det</b> ()</td></tr>
+<tr class="memdesc:ace95025dd985ddaa6c1ed72e8b464a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод вычисления определителя матрицы <br /></td></tr>
+<tr class="separator:ace95025dd985ddaa6c1ed72e8b464a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5689deaea57136afa76aad0b78d7354"><td class="memItemLeft" align="right" valign="top"><a id="ab5689deaea57136afa76aad0b78d7354" name="ab5689deaea57136afa76aad0b78d7354"></a>
+<a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>minor</b> (int row, int col)</td></tr>
+<tr class="memdesc:ab5689deaea57136afa76aad0b78d7354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод вычисления минора матрицы <br /></td></tr>
+<tr class="separator:ab5689deaea57136afa76aad0b78d7354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f5e7d4bb1bfd6586bd3384bd2a02b0"><td class="memItemLeft" align="right" valign="top"><a id="ac4f5e7d4bb1bfd6586bd3384bd2a02b0" name="ac4f5e7d4bb1bfd6586bd3384bd2a02b0"></a>
+<a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inverse</b> ()</td></tr>
+<tr class="memdesc:ac4f5e7d4bb1bfd6586bd3384bd2a02b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод вычисления обратной матрицы <br /></td></tr>
+<tr class="separator:ac4f5e7d4bb1bfd6586bd3384bd2a02b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80cb34cb249d96168c7f25ed1cc5c675"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#a80cb34cb249d96168c7f25ed1cc5c675">identity</a> ()</td></tr>
+<tr class="memdesc:a80cb34cb249d96168c7f25ed1cc5c675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод создания единичной матрицы  <br /></td></tr>
+<tr class="separator:a80cb34cb249d96168c7f25ed1cc5c675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a56a0bab5273e3dde09d81efd4d5c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix.html#ad4a56a0bab5273e3dde09d81efd4d5c6">print</a> (const std::string name=&quot;&quot;) const</td></tr>
+<tr class="memdesc:ad4a56a0bab5273e3dde09d81efd4d5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод вывода матрицы в консоль  <br /></td></tr>
+<tr class="separator:ad4a56a0bab5273e3dde09d81efd4d5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Объявление класса <a class="el" href="class_matrix.html" title="Объявление класса Matrix.">Matrix</a>. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a80cb34cb249d96168c7f25ed1cc5c675" name="a80cb34cb249d96168c7f25ed1cc5c675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80cb34cb249d96168c7f25ed1cc5c675">&#9670;&#160;</a></span>identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::identity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод создания единичной матрицы </p>
+<p>Другие методы </p>
+
+</div>
+</div>
+<a id="ac204ad5fbd6be38e816536ac8d56deac" name="ac204ad5fbd6be38e816536ac8d56deac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac204ad5fbd6be38e816536ac8d56deac">&#9670;&#160;</a></span>multiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод умножения матриц с изменением исходной матрицы </p>
+<p>Методы умножения матрицы на матрицу и матрицы на скаляр дублируются перегруженным методом multiply В отличие от оператора *, multiply изменяет исходную матрицу </p>
+
+</div>
+</div>
+<a id="a78ca86168259fdd09159c500dc002f82" name="a78ca86168259fdd09159c500dc002f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ca86168259fdd09159c500dc002f82">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод сложения матриц </p>
+<p>Методы сложения (вычитания) матриц, умножения матрицы на матрицу и матрицы на скаляр реализуются через перегрузку операторов +(-) и * соответсвенно не изменяют исходную матрицу, а возвращают новую </p>
+
+</div>
+</div>
+<a id="ad4a56a0bab5273e3dde09d81efd4d5c6" name="ad4a56a0bab5273e3dde09d81efd4d5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a56a0bab5273e3dde09d81efd4d5c6">&#9670;&#160;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::print </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод вывода матрицы в консоль </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Имя матрицы для вывода. Необязательный параметр типа string. Выводится в консоль над матрицей. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a759661b75b9681f3a89ff75e27933b3a" name="a759661b75b9681f3a89ff75e27933b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a759661b75b9681f3a89ff75e27933b3a">&#9670;&#160;</a></span>transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод транспонирования <br  />
+ </p>
+<p>Методы для прочих вычислений с матрицей </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>C:/Users/Alexey/Documents/GitHub/kns-oes/KNS-OES/kns-oes/HEADER/<a class="el" href="_matrix_8hpp_source.html">Matrix.hpp</a></li>
+<li>C:/Users/Alexey/Documents/GitHub/kns-oes/KNS-OES/kns-oes/srs/<a class="el" href="_matix_8cpp.html">Matix.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
