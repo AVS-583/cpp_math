@@ -22,7 +22,7 @@ Matrix::Matrix(int rows, int cols)
         }
     }
 }
-
+/*************************************************************************/
 Matrix::Matrix(const Matrix& other)
 {
     //cout << "Вызван конструктор копирования " << this << endl;
@@ -38,7 +38,7 @@ Matrix::Matrix(const Matrix& other)
         }
     }
 }
-
+/*************************************************************************/
 Matrix::~Matrix()
 {
     for (int i = 0; i < rows; i++) {
@@ -47,7 +47,7 @@ Matrix::~Matrix()
     delete[] matrix;
     //cout << "Вызван деструктор " << this << endl;
 }
-
+/*************************************************************************/
 Matrix& Matrix::operator= (const Matrix& other)
 {
     if (this == &other)
@@ -69,12 +69,12 @@ Matrix& Matrix::operator= (const Matrix& other)
 
     return *this;
 }
-
+/*************************************************************************/
 double& Matrix::operator() (int row, int col)
 {
     return matrix[row][col];
 }
-
+/*************************************************************************/
 Matrix Matrix::operator+(const Matrix& other)
 {
     if (rows != other.cols) {
@@ -93,7 +93,7 @@ Matrix Matrix::operator+(const Matrix& other)
     }
     return result;
 }
-
+/*************************************************************************/
 Matrix Matrix::operator-(const Matrix& other)
 {
     if (rows != other.cols) {
@@ -112,7 +112,7 @@ Matrix Matrix::operator-(const Matrix& other)
     }
     return result;
 }
-
+/*************************************************************************/
 Matrix Matrix::operator*(const Matrix& other)
 {
     if (cols != other.rows) {
@@ -131,7 +131,7 @@ Matrix Matrix::operator*(const Matrix& other)
     }
     return result;
 }
-
+/*************************************************************************/
 Matrix Matrix::operator* (const double scalar)
 {
     Matrix result(rows, cols);
@@ -142,7 +142,7 @@ Matrix Matrix::operator* (const double scalar)
     }
     return result;
 }
-
+/*************************************************************************/
 void Matrix::multiply(const Matrix& other)
 {
     if (cols != other.rows) {
@@ -158,7 +158,7 @@ void Matrix::multiply(const Matrix& other)
         }
     }
 }
-
+/*************************************************************************/
 void Matrix::multiply(const double scalar)
 {
     for (int i = 0; i < rows; i++) {
@@ -167,8 +167,7 @@ void Matrix::multiply(const double scalar)
         }
     }
 }
-
-
+/*************************************************************************/
 Matrix Matrix::transpose() const
 {
     Matrix result(cols, rows);
@@ -179,7 +178,7 @@ Matrix Matrix::transpose() const
     }
     return result;
 }
-
+/*************************************************************************/
 double Matrix::det()
 {
     if (rows != cols) {
@@ -198,7 +197,7 @@ double Matrix::det()
     }
     return result;
 }
-
+/*************************************************************************/
 Matrix Matrix::minor(int row, int col)
 {
     Matrix result(rows - 1, cols - 1);
@@ -215,10 +214,9 @@ Matrix Matrix::minor(int row, int col)
     }
     return result;
 }
-
+/*************************************************************************/
 Matrix Matrix::inverse()
 {
-    //Matrix result(rows, cols);
     Matrix result(rows, cols);
     double determinant = det();
     if (determinant == 0) {
@@ -232,12 +230,12 @@ Matrix Matrix::inverse()
             cofactor(i, j) = pow(-1, i + j) * minor(i, j).det();
         }
     }
-    result = cofactor.transpose(); // этот result ломает дальнейшие вызовы методов этого класса
+    result = cofactor.transpose();
 
     result.multiply(1.0 / determinant);
     return result;
 }
-
+/*************************************************************************/
 void Matrix::identity()
 {
     for (int i = 0; i < rows; i++) {
@@ -246,7 +244,7 @@ void Matrix::identity()
         }
     }
 }
-
+/*************************************************************************/
 void Matrix::print(const std::string name) const
 {
     if (name != "") {
